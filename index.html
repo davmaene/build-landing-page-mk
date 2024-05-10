@@ -39,8 +39,8 @@
     <link rel="stylesheet" href="/assets/library/settings/settings.css" />
     <script src="/assets/library/owlcarousel/owl.carousel.min.js"></script>
     <script src="./src/assets/styles/main.style.css"></script>
-    <script type="module" crossorigin src="/assets/index-kTxPnKfQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-HaKI90h7.css">
+    <script type="module" crossorigin src="/assets/index-8U5cNvJx.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-iJjoQQbu.css">
   </head>
   <body>
     <div class="page-loader">
@@ -78,6 +78,9 @@
     <script src="/assets/js/main.js"></script>
     <script src="/assets/library/settings/jquery.cookies.min.js"></script>
     <script src="/assets/library/settings/settings.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc5PNEpAAAAAGFFXPbuWamCWoK4zEesVP6cFstG"></script>
+  <!-- Your code -->
+</head>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-DB0Z96DK5Z"></script>
@@ -135,6 +138,15 @@
           easing: 'ease-in-sine',
           delay: 100,
         });
+      </script>
+      <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6Lc5PNEpAAAAAGFFXPbuWamCWoK4zEesVP6cFstG', {action: 'LOGIN'});
+            console.log(token)
+          });
+        }
       </script>
   </body>
 </html>
