@@ -119,13 +119,13 @@ blockquote {
 #zoom-out:hover,
 .pagination li a:hover,
 .pagination li a.active {
-	background-color:#5f36bb;
+	background-color:#003300;
 }
 
 #zoom-in, 
 #zoom-out,
 .team-member .team-social {
-	background-color:rgba(124, 79, 224, 0.85);
+	background-color:rgba(0, 51, 0, 0.85);
 }
 
 
